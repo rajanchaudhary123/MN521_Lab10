@@ -1,0 +1,8 @@
+---
+- name: MN521 Ansible Lab 10
+  hosts: routers
+  gather_facts: no
+  vars_files:
+    - vars/main.yml
+  tasks:
+    - include_tasks: tasks/main.yml

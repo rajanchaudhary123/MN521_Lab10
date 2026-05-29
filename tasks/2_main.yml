@@ -1,0 +1,18 @@
+---
+- name: Interface Configuration
+  ios_l3_interfaces:
+    config:
+      - name: "{{ router_interfaces[router_hostname].interface }}"
+        ipv4:
+          - address: "{{ router_interfaces[router_hostname].ip_address }}"
+    state: replaced
+  register: int
+
+- debug:
+    var: int.before
+
+- debug:
+    var: int.commands
+
+- debug:
+    var: int.after

@@ -1,0 +1,9 @@
+---
+- name: Show router hostname
+  ios_command:
+    commands:
+      - show running-config | include hostname
+  register: hostname_output
+
+- debug:
+    var: hostname_output.stdout_lines

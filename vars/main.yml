@@ -1,0 +1,13 @@
+---
+ansible_network_os: ios
+ansible_connection: network_cli
+ansible_ssh_user: cisco
+ansible_password: cisco
+
+router_interfaces:
+  Router-1:
+    interface: FastEthernet0/1
+    ip_address: 192.168.1.20/24
+  Router-2:
+    interface: FastEthernet0/1
+    ip_address: 192.168.2.21/24
